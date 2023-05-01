@@ -30,7 +30,7 @@ print(naive3([0,2,1,3,2,2],6))
 
 
 #EFFICIENT METHOD
-
+#when both slow and fast start from the same index but fast is 2x faster than slow
 def efficient(arr):
     slow = arr[0]
     fast = arr[0]
@@ -38,7 +38,7 @@ def efficient(arr):
         slow = arr[slow]
         fast = arr[arr[fast]]
     return arr[slow]
-
+#when slow begins from starting index and fast from the last index and here both slow and fast move at the same pace
 def efficient2(arr,n):
     slow = arr[0]
     fast = arr[n-1]
