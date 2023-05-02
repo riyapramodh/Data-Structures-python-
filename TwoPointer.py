@@ -13,9 +13,9 @@ def search(arr,s,n):
     i = 0
     j = n-1
     while i<=j:
-        if arr[i]+arr[j]>s:
+        if arr[i]+arr[j]>s: #if the sum of the two numbers are greater than the given number we decrement the end pointer by one
             j = j - 1
-        if arr[i]+arr[j]<s:
+        if arr[i]+arr[j]<s:#if the sum of the two numbers are lesser than the given number then we increment the head pointer by one
             i = i + 1
         if arr[i] + arr[j] == s:
             return True
