@@ -28,10 +28,10 @@ def heapify(arr,i,upper):
 
 def heapSort(arr):
     for j in range((len(arr)-2)//2,-1,-1):
-        siftDown(arr,j,len(arr))
+        siftDown(arr,j,len(arr))#we have heapified the branch which we have exchanged now the remaining branch(s)are heapified
     for end in range(len(arr)-1,0,-1):
-        arr[0],arr[end] = arr[end],arr[0]
-        heapify(arr,0,end)
+        arr[0],arr[end] = arr[end],arr[0]#we exchange the end element with the zeroth element
+        heapify(arr,0,end)#we heapify the side or branch alongside of that
     return arr
 
 
