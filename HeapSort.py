@@ -1,5 +1,5 @@
 #heap sort
-def siftDown(arr,i,upper):
+def heapify(arr,i,upper):
     while True: #inorder to avoid the use of multiple recurssions
         l = 2*i+1
         r = 2*i+2
@@ -31,7 +31,7 @@ def heapSort(arr):
         siftDown(arr,j,len(arr))
     for end in range(len(arr)-1,0,-1):
         arr[0],arr[end] = arr[end],arr[0]
-        siftDown(arr,0,end)
+        heapify(arr,0,end)
     return arr
 
 
