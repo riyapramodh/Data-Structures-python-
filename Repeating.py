@@ -43,8 +43,8 @@ def efficient2(arr,n):
     slow = arr[0]
     fast = arr[n-1]
     while slow != fast:
-        slow = arr[slow]
-        fast = arr[fast]
+        slow = arr[slow] #our next "i" would be the value of the previous element stored in "i"
+        fast = arr[fast] #our next "j" would be the value of the previous element stored in "j"
         return slow
 
 print(efficient([1,3,2,4,6,5,7,3]))
