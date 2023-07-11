@@ -15,14 +15,14 @@ def naive(arr):
     return temp
 print(naive([1,4,-1,-4,2,-5]))
 #comes in an ordered manner and is the efficient solution
-def complex(arr,low,high):
+def complex(arr,low,high): #sort the partitioned side within; the left and right of the pivot will be sorted among themselves
     if low<=high:
         p = pIndex(arr,low,high)
         complex(arr,low,p-1)
         complex(arr,p+1,high)
     return arr
 
-def pIndex(arr,low,high):
+def pIndex(arr,low,high):#to find the elemnet from the front that is bigger than pivot if that element is still smaller than the pivot thn the if loop continues till it finds the bigger value
     i = low
     j = high
     pivot = arr[low]
