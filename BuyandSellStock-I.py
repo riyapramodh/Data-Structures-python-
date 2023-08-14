@@ -6,10 +6,11 @@ class Solution(object):
         :rtype: int
         """
         profit = 0
-        minprice = float('inf')
-        for i in range(len(prices)):
-            minprice = min(minprice,prices[i])
-            profit = max(profit, prices[i] - minprice)
+        minprice = prices[0]
+       for i in range(1,len(prices)):
+           check_profit = prices[i] - minprice # checking the profit that can be made
+           profit = max(profit,cehck_profit) # we see if the newly calculated profit is greater or the prev calculated profit and assign that to profit
+           minprice = min(minprice,prices[i]) #we check if the current ele is less value or the already stored minprice value is lesser
         return profit
         # maxprofit = 0
         # buy = prices[0]
